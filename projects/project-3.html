@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>QoS Simulation Lab | Projects | Jaber Saripada</title>
+
+  <meta name="description" content="NET 301 Quality of Service academic project covering FIFO, LLQ, CBWFQ, WRED, traffic marking, and a physical packet simulation.">
+
+  <link rel="canonical" href="https://jaber1313.github.io/jaber-portfolio/projects/project-3.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="QoS Simulation Lab | Jaber Saripada">
+  <meta property="og:description" content="A NET 301 Quality of Service project documenting traffic management concepts and a physical packet simulation.">
+  <meta property="og:url" content="https://jaber1313.github.io/jaber-portfolio/projects/project-3.html">
+
+  <script>
+    (function () {
+      var t = null;
+      try {
+        t = localStorage.getItem("theme");
+      } catch (e) {}
+
+      if (!t) {
+        t = window.matchMedia &&
+          matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark" : "light";
+      }
+
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="site-header">
+    <noscript>Enable JavaScript for site navigation.</noscript>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container">
+
+        <p style="margin-bottom:1rem">
+          <a href="../projects.html">← All projects</a>
+        </p>
+
+        <div class="card-meta">
+          <span class="badge">Academic project</span>
+          <span class="badge badge-outline">Networking</span>
+        </div>
+
+        <h1>Quality of Service (QoS) Simulation Lab</h1>
+
+        <p class="lead">
+          A NET 301 academic project exploring network traffic
+          management, prioritization, congestion handling, and
+          Quality of Service through research and physical simulation.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container grid grid-2" style="align-items:start">
+
+        <div class="reveal">
+
+          <h2>Overview</h2>
+
+          <p>
+            This project, titled <strong>Operation: Fiesta Night Rescue</strong>,
+            focuses on understanding how Quality of Service (QoS)
+            helps manage different types of network traffic.
+            The activity examines a network scenario where multiple
+            traffic classes share a limited WAN connection.
+          </p>
+
+          <p>
+            The report covers traffic analysis, bandwidth allocation,
+            queue management, traffic marking, congestion avoidance,
+            and the differences between traffic shaping and policing.
+          </p>
+
+          <h3 id="problem" style="margin-top:1.5rem">Problem</h3>
+
+          <p>
+            The simulated network scenario involves a 100 Mbps LAN
+            connected to a 2.048 Mbps WAN link. The combined peak
+            traffic demand reaches 2,836 kbps, exceeding the WAN
+            capacity by 788 kbps. This creates a congestion problem
+            that requires proper traffic prioritization and bandwidth
+            management.
+          </p>
+
+          <h3 id="solution" style="margin-top:1.5rem">Proposed QoS Approach</h3>
+
+          <p>
+            The project examines the use of Low Latency Queuing (LLQ)
+            for voice traffic and Class-Based Weighted Fair Queuing
+            (CBWFQ) for other traffic classes. It also discusses
+            DiffServ, DSCP marking, Weighted Random Early Detection
+            (WRED), and traffic shaping and policing.
+          </p>
+
+          <h3 id="key-features" style="margin-top:1.5rem">Key Activities</h3>
+
+          <ul>
+            <li>
+              <strong>Traffic analysis:</strong>
+              Identifying different network traffic types and
+              their bandwidth requirements.
+            </li>
+
+            <li>
+              <strong>Queue management:</strong>
+              Comparing FIFO, WFQ, CBWFQ, and LLQ.
+            </li>
+
+            <li>
+              <strong>Bandwidth allocation:</strong>
+              Assigning bandwidth based on traffic priority.
+            </li>
+
+            <li>
+              <strong>Traffic marking:</strong>
+              Studying Layer 2 CoS and Layer 3 DSCP markings.
+            </li>
+
+            <li>
+              <strong>Congestion avoidance:</strong>
+              Understanding WRED and its behavior.
+            </li>
+
+            <li>
+              <strong>Shaping and policing:</strong>
+              Comparing how network traffic is controlled.
+            </li>
+
+            <li>
+              <strong>Packet Jeepney simulation:</strong>
+              Comparing FIFO and LLQ + CBWFQ using 20
+              physical packet slips across two rounds.
+            </li>
+          </ul>
+
+          <h3 style="margin-top:1.5rem">Simulation Results</h3>
+
+          <p>
+            During the physical simulation, the first round used
+            FIFO, while the second round used LLQ + CBWFQ.
+            The report showed that LLQ + CBWFQ protected all
+            voice, video, and payment packets, while FIFO
+            dropped one voice packet.
+          </p>
+
+          <p>
+            The simulation demonstrated how prioritizing
+            important traffic can improve the handling of
+            network packets during congestion, although
+            lower-priority traffic may experience more drops.
+          </p>
+
+          <h3 style="margin-top:1.5rem">My Contribution</h3>
+
+          <p>
+            I served as the Team Lead / Project Manager.
+            I also personally narrated and presented the
+            physical simulation, explaining the FIFO and
+            QoS approaches during the two demonstration rounds.
+          </p>
+
+          <h3 style="margin-top:1.5rem">What I Learned</h3>
+
+          <p>
+            This project strengthened my understanding of
+            network traffic management, bandwidth allocation,
+            queueing mechanisms, and congestion handling.
+            It also improved my ability to explain networking
+            concepts through practical activities and presentations.
+          </p>
+
+          <h3 style="margin-top:1.5rem">Scope and Limitations</h3>
+
+          <p>
+            This is an academic networking project based on
+            a simulated network scenario and a physical
+            classroom demonstration. The Packet Jeepney
+            activity is a simplified representation of packet
+            handling and does not reproduce the full behavior
+            of a production network.
+          </p>
+
+        </div>
+
+        <aside class="reveal">
+
+          <div class="card">
+
+            <h3>Project Facts</h3>
+
+            <dl style="margin:0;display:grid;gap:.75rem">
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">Project Title</dt>
+                <dd style="margin:0">Operation: Fiesta Night Rescue</dd>
+              </div>
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">Subject</dt>
+                <dd style="margin:0">NET 301 – Quality of Service</dd>
+              </div>
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">Institution</dt>
+                <dd style="margin:0">City College of Calamba</dd>
+              </div>
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">Section</dt>
+                <dd style="margin:0">3-IT11</dd>
+              </div>
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">Year</dt>
+                <dd style="margin:0">2026</dd>
+              </div>
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">Date</dt>
+                <dd style="margin:0">August–October 2026</dd>
+              </div>
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">Status</dt>
+                <dd style="margin:0">Completed Academic Project</dd>
+              </div>
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">My Role</dt>
+                <dd style="margin:0">Team Lead / Project Manager</dd>
+              </div>
+
+              <div>
+                <dt class="muted" style="font-size:.8rem">Physical Simulation</dt>
+                <dd style="margin:0">20 Packet Slips, Two Rounds</dd>
+              </div>
+
+            </dl>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+
+        <h2>Project Documentation</h2>
+
+        <p class="muted">
+          The complete 12-page Network Rescue Report contains
+          the research, calculations, diagrams, traffic analysis,
+          simulation results, and Council Hearing defense notes.
+        </p>
+
+        <div class="card" style="margin-top:1.5rem">
+
+          <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+
+            <div style="font-size:2.5rem" aria-hidden="true">
+              📄
+            </div>
+
+            <div style="flex:1;min-width:180px">
+              <h3 style="margin:0">QoS Network Rescue Report</h3>
+              <p class="muted" style="margin:.35rem 0 0">
+                Operation: Fiesta Night Rescue · PDF · 12 pages
+              </p>
+            </div>
+
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem">
+
+            <a
+              class="btn btn-primary"
+              href="../files/qos-simulation-report.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View PDF Report ↗
+            </a>
+
+            <a
+              class="btn btn-ghost"
+              href="../files/qos-simulation-report.pdf"
+              download="QoS-Network-Rescue-Report.pdf"
+            >
+              Download PDF ↓
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container reveal"
+        style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between">
+
+        <a class="btn btn-ghost" href="project-2.html">
+          ← Previous: Packet Tracer Lab
+        </a>
+
+        <a class="btn btn-primary" href="../projects.html">
+          All projects →
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <noscript>© Jaber Saripada</noscript>
+  </footer>
+
+</body>
+</html>

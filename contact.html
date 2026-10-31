@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Jaber Saripada</title>
+  <meta name="description" content="Contact Jaber Saripada, a third-year BSIT student, about internships, collaborations, or IT-related opportunities.">
+  <link rel="canonical" href="https://jaber1313.github.io/jaber-portfolio/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Jaber Saripada">
+  <meta property="og:description" content="Get in touch about internships, collaborations, or IT opportunities.">
+  <meta property="og:url" content="https://jaber1313.github.io/jaber-portfolio/contact.html">
+
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header">
+    <noscript>Enable JavaScript for site navigation.</noscript>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Let's talk.</h1>
+        <p class="lead">
+          Interested in an internship, collaboration, or just want to say hello?
+          Reach out directly or send a message below.
+        </p>
+      </div>
+    </section>
+
+    <!-- Direct contact details -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="grid grid-3">
+
+          <article class="card reveal">
+            <span class="eyebrow">Email</span>
+            <p style="margin:0">
+              <a href="mailto:jabebersaripadada@gmail.com">
+                jabebersaripadada@gmail.com
+              </a>
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="eyebrow">GitHub</span>
+            <p style="margin:0">
+              <a href="https://github.com/Jaber1313" target="_blank" rel="noopener">
+                github.com/Jaber1313
+              </a>
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="eyebrow">Phone</span>
+            <p style="margin:0">
+              <a href="tel:09614442769">09614442769</a>
+            </p>
+          </article>
+
+        </div>
+
+        <p class="muted reveal" style="margin:1.25rem 0 0">
+          Location: Calamba City, Laguna, Philippines
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact form -->
+    <section class="section">
+      <div class="container" style="max-width:760px">
+        <div class="card reveal">
+          <h2 style="font-size:1.4rem">Send a message</h2>
+
+          <!-- Replace YOUR_FORM_ID after creating your Formspree form -->
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xwllnype"
+            method="POST"
+            novalidate
+          >
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <!-- Honeypot spam protection -->
+            <input
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              style="position:absolute;left:-9999px"
+              aria-hidden="true"
+            >
+
+            <button class="btn btn-primary" type="submit" id="submit-btn">
+              Send message
+            </button>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <noscript>© Jaber Saripada</noscript>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("contact-form");
+      var status = document.getElementById("form-status");
+      var btn = document.getElementById("submit-btn");
+
+      function fieldValue(fieldName) {
+        var el = form.elements.namedItem(fieldName);
+        return el ? el.value.trim() : "";
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        status.style.color = "";
+
+        var nameValue = fieldValue("name");
+        var emailValue = fieldValue("email");
+        var subjectValue = fieldValue("subject");
+        var messageValue = fieldValue("message");
+        var endpoint = form.getAttribute("action");
+
+        if (!nameValue || !emailValue || !subjectValue || !messageValue) {
+          status.textContent = "Please fill in all fields.";
+          status.style.color = "#dc2626";
+          return;
+        }
+
+        if (!/^\S+@\S+\.\S+$/.test(emailValue)) {
+          status.textContent = "Please enter a valid email address.";
+          status.style.color = "#dc2626";
+          return;
+        }
+
+        if (endpoint.indexOf("YOUR_FORM_ID") !== -1) {
+          status.textContent = "The contact form is not connected yet. Please email me directly.";
+          status.style.color = "#d97706";
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+
+        fetch(endpoint, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { "Accept": "application/json" }
+        })
+        .then(function (res) {
+          if (res.ok) {
+            status.textContent = "Thanks! Your message was sent.";
+            status.style.color = "#16a34a";
+            form.reset();
+          } else {
+            throw new Error("Request failed");
+          }
+        })
+        .catch(function () {
+          status.textContent = "Something went wrong. Please try again or email me directly.";
+          status.style.color = "#dc2626";
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.textContent = "Send message";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

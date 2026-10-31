@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Jaber Saripada</title>
+  <meta name="description" content="Academic projects by Jaber Saripada, a BSIT student: a customized keychain ordering system, a Cisco Packet Tracer networking lab, and a QoS simulation lab.">
+  <link rel="canonical" href="https://Jaber1313.github.io/jaber-portfolio/projects.html"> <!-- PLACEHOLDER -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | Jaber Saripada">
+  <meta property="og:description" content="Academic projects in systems design and networking.">
+  <meta property="og:url" content="https://Jaber1313.github.io/jaber-portfolio/projects.html">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Page-specific: filter toolbar */
+    .filter-toolbar {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+    .filter-grid {
+      display: grid; gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      align-items: end;
+    }
+    .filter-grid .field { margin: 0; }
+    .filter-grid .field-search { grid-column: 1 / -1; }
+    .filter-footer {
+      display: flex; flex-wrap: wrap; gap: .75rem;
+      align-items: center; justify-content: space-between; margin-top: 1rem;
+    }
+    .filter-footer p { margin: 0; }
+    .btn-small { padding: .5rem 1rem; font-size: .88rem; }
+  </style>
+  <script src="js/main.js" defer></script>
+  <script src="js/projects.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"><noscript>Enable JavaScript for site navigation.</noscript></header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Projects</span>
+        <h1>Academic projects, documented honestly.</h1>
+        <p class="lead">Every project here was completed or is being developed as part of my BSIT studies. None are commercial products.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+
+        <!-- Search + filters -->
+        <div class="filter-toolbar" role="search" aria-label="Search and filter projects">
+          <div class="filter-grid">
+            <div class="field field-search">
+              <label for="project-search">Search projects</label>
+              <input id="project-search" type="search" placeholder="Search title, description, or tags: try “VLAN”, “QoS”, or “keychain”" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="filter-category">Category</label>
+              <select id="filter-category"><option value="All">All categories</option></select>
+            </div>
+            <div class="field">
+              <label for="filter-type">Project type</label>
+              <select id="filter-type"><option value="All">All types</option></select>
+            </div>
+            <div class="field">
+              <label for="filter-year">Year</label>
+              <select id="filter-year"><option value="All">All years</option></select>
+            </div>
+          </div>
+
+          <div class="filter-footer">
+            <p id="result-count" class="muted" role="status" aria-live="polite"></p>
+            <button type="button" class="btn btn-ghost btn-small js-clear">Clear filters</button>
+          </div>
+        </div>
+
+        <div id="project-grid" class="grid grid-3">
+          <noscript><p>Enable JavaScript to browse projects, or visit them directly:
+            <a href="projects/project-1.html">Want.3D.Print</a>,
+            <a href="projects/project-2.html">Packet Tracer Lab</a>,
+            <a href="projects/project-3.html">QoS Simulation Lab</a>.</p></noscript>
+        </div>
+
+        <div id="no-results" hidden style="text-align:center;padding:2rem 0">
+          <h3>No projects match your search</h3>
+          <p class="muted">Try a different keyword or clear the filters.</p>
+          <button type="button" class="btn btn-ghost js-clear">Clear filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"><noscript>© Jaber Saripada</noscript></footer>
+</body>
+</html>
