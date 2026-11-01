@@ -1,4 +1,3 @@
-
 /* ==========================================================
    projects.js — project data, search, filters, and images
    Jaber Saripada's academic portfolio
@@ -142,6 +141,146 @@
       status: "Completed academic project",
 
       url: "projects/project-3.html"
+    },
+
+    {
+      id: 4,
+      title: "Noir Coffee",
+      category: "Graphic Design",
+      type: "CEEL 301 activity",
+
+      summary: "A coffee shop promotional poster featuring a warm brown and cream color palette, expressive typography, and organized menu and price information.",
+
+      images: [
+        {
+          src: "assets/images/ceel/noir-coffee.png",
+          alt: "Noir Coffee promotional poster design"
+        }
+      ],
+
+      tags: [
+        "Digital marketing graphics",
+        "Promotional poster",
+        "Typography",
+        "Layout design",
+        "Color palette"
+      ],
+
+      features: [
+        "Promotional poster layout",
+        "Menu and price presentation",
+        "Typography and visual hierarchy"
+      ],
+
+      year: 2026,
+      date: "2026",
+      status: "Completed CEEL 301 class activity",
+      url: "projects/ceel-1.html"
+    },
+
+    {
+      id: 5,
+      title: "Starlight",
+      category: "Graphic Design",
+      type: "CEEL 301 activity",
+
+      summary: "A brand identity design featuring metallic silver star and crescent elements with a gothic-inspired wordmark against a dark background.",
+
+      images: [
+        {
+          src: "assets/images/ceel/starlight.png",
+          alt: "Starlight brand identity design"
+        }
+      ],
+
+      tags: [
+        "Brand design",
+        "Visual identity",
+        "Logo design",
+        "Gothic typography",
+        "Metallic effects"
+      ],
+
+      features: [
+        "Metallic visual elements",
+        "Star and crescent motifs",
+        "Custom wordmark"
+      ],
+
+      year: 2026,
+      date: "2026",
+      status: "Completed CEEL 301 class activity",
+      url: "projects/ceel-2.html"
+    },
+
+    {
+      id: 6,
+      title: "The 3D Banana",
+      category: "Graphic Design",
+      type: "CEEL 301 activity",
+
+      summary: "A traditional drawing activity featuring a banana rendered with colored pencils, shading, and techniques that create shape and dimension.",
+
+      images: [
+        {
+          src: "assets/images/ceel/3d-banana.jpg",
+          alt: "Three-dimensional banana colored pencil drawing"
+        }
+      ],
+
+      tags: [
+        "Traditional drawing",
+        "Colored pencil",
+        "Shading",
+        "Form and dimension",
+        "Illustration"
+      ],
+
+      features: [
+        "Hand-drawn illustration",
+        "Colored-pencil rendering",
+        "Pencil shading"
+      ],
+
+      year: 2026,
+      date: "August 5, 2026",
+      status: "Completed CEEL 301 class activity",
+      url: "projects/ceel-3.html"
+    },
+
+    {
+      id: 7,
+      title: "UNTHREAD",
+      category: "Graphic Design",
+      type: "CEEL 301 activity",
+
+      summary: "A bold typography and logo composition featuring distressed neon-green lettering and a thread-inspired graphic against a dark background.",
+
+      images: [
+        {
+          src: "assets/images/ceel/unthread.png",
+          alt: "UNTHREAD typography and logo design"
+        }
+      ],
+
+      tags: [
+        "Typography",
+        "Logo design",
+        "Distressed texture",
+        "Streetwear branding",
+        "Visual composition"
+      ],
+
+      features: [
+        "Bold display typography",
+        "Distressed texture",
+        "Thread-inspired graphic"
+      ],
+
+      year: 2026,
+      date: "2026",
+      status: "Completed CEEL 301 class activity",
+      url: "projects/ceel-4.html"
     }
   ];
 
@@ -322,9 +461,11 @@
 
         '<div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:1rem">' +
 
-          '<a class="link-arrow" href="' + esc(p.url) +
-          '" aria-label="View details for ' + esc(p.title) +
-          '">View details </a>' +
+          (p.url
+            ? '<a class="link-arrow" href="' + esc(p.url) +
+              '" aria-label="View details for ' + esc(p.title) +
+              '">View details </a>'
+            : "") +
 
           documentLink(p) +
 
