@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The 3D Banana | Projects | Jaber Saripada</title>
+  <meta name="description" content="Three-dimensional banana drawing created for CEEL 301 Graphics Design.">
+
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) {
+        t = window.matchMedia &&
+          matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+
+  <style>
+    .detail-image {
+      display: block;
+      width: 100%;
+      max-height: 750px;
+      object-fit: contain;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="site-header">
+    <noscript>Enable JavaScript for site navigation.</noscript>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container">
+        <p style="margin-bottom:1rem">
+          <a href="../projects.html">← All projects</a>
+        </p>
+
+        <div class="card-meta">
+          <span class="badge">CEEL 301 Activity</span>
+          <span class="badge badge-outline">Graphic Design</span>
+        </div>
+
+        <h1>The 3D Banana</h1>
+
+        <p class="lead">
+          A traditional drawing activity exploring form, shading, and dimension.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container grid grid-2" style="align-items:start">
+
+        <div class="reveal">
+          <h2>Project Overview</h2>
+
+          <p>
+            The 3D Banana is a traditional drawing activity
+            completed for CEEL 301 Graphics Design. The activity
+            focuses on illustrating a banana while creating
+            the appearance of depth and dimension.
+          </p>
+
+          <h3 style="margin-top:1.5rem">Drawing Concept</h3>
+
+          <p>
+            Colored pencils and shading techniques are used
+            to represent the banana's shape, surface, and
+            three-dimensional appearance.
+          </p>
+
+          <h3 style="margin-top:1.5rem">Techniques Applied</h3>
+
+          <ul>
+            <li>Traditional hand drawing</li>
+            <li>Colored-pencil rendering</li>
+            <li>Shading and tonal variation</li>
+            <li>Shape and form representation</li>
+            <li>Creating the appearance of dimension</li>
+          </ul>
+
+          <h3 style="margin-top:1.5rem">What I Learned</h3>
+
+          <p>
+            This activity helped me understand how shading
+            and tonal differences can make a flat drawing
+            appear more realistic and three-dimensional.
+          </p>
+        </div>
+
+        <aside class="reveal">
+          <div class="card">
+            <h3>Project Facts</h3>
+
+            <dl style="margin:0;display:grid;gap:.75rem">
+              <div>
+                <dt class="muted">Project Type</dt>
+                <dd>Academic Drawing Activity</dd>
+              </div>
+              <div>
+                <dt class="muted">Subject</dt>
+                <dd>CEEL 301 – Graphics Design</dd>
+              </div>
+              <div>
+                <dt class="muted">Year</dt>
+                <dd>2026</dd>
+              </div>
+              <div>
+                <dt class="muted">Date</dt>
+                <dd>August 5, 2026</dd>
+              </div>
+              <div>
+                <dt class="muted">Status</dt>
+                <dd>Completed Class Activity</dd>
+              </div>
+              <div>
+                <dt class="muted">Medium</dt>
+                <dd>Colored Pencils</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <h2>Final Artwork</h2>
+        <p class="muted">
+          Original three-dimensional banana drawing.
+        </p>
+
+        <img
+          class="detail-image"
+          src="../assets/images/ceel/3d-banana.jpg"
+          alt="Hand-drawn banana illustration using colored pencils"
+        >
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container"
+        style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between">
+        <a class="btn btn-ghost" href="../projects.html">
+          ← Back to projects
+        </a>
+
+        <a class="btn btn-primary" href="ceel-4.html">
+          Next: UNTHREAD →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <noscript>© Jaber Saripada</noscript>
+  </footer>
+</body>
+</html>

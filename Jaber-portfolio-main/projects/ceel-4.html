@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>UNTHREAD | Projects | Jaber Saripada</title>
+  <meta name="description" content="UNTHREAD typography and logo design created for CEEL 301 Graphics Design.">
+
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) {
+        t = window.matchMedia &&
+          matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+
+  <style>
+    .detail-image {
+      display: block;
+      width: 100%;
+      max-height: 750px;
+      object-fit: contain;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="site-header">
+    <noscript>Enable JavaScript for site navigation.</noscript>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container">
+        <p style="margin-bottom:1rem">
+          <a href="../projects.html">← All projects</a>
+        </p>
+
+        <div class="card-meta">
+          <span class="badge">CEEL 301 Activity</span>
+          <span class="badge badge-outline">Graphic Design</span>
+        </div>
+
+        <h1>UNTHREAD</h1>
+
+        <p class="lead">
+          A typography and logo composition with a bold, distressed visual style.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container grid grid-2" style="align-items:start">
+
+        <div class="reveal">
+          <h2>Project Overview</h2>
+
+          <p>
+            UNTHREAD is a typography and graphic design activity
+            created for CEEL 301 Graphics Design. The composition
+            focuses on expressive lettering, texture, and
+            visual identity.
+          </p>
+
+          <h3 style="margin-top:1.5rem">Design Concept</h3>
+
+          <p>
+            The design uses bold neon-green lettering with
+            a distressed appearance against a dark background.
+            A thread-inspired graphic element adds character
+            to the overall composition.
+          </p>
+
+          <h3 style="margin-top:1.5rem">Design Elements</h3>
+
+          <ul>
+            <li>Bold display typography</li>
+            <li>Distressed lettering texture</li>
+            <li>Neon-green color treatment</li>
+            <li>Thread-inspired graphic element</li>
+            <li>Dark background and visual contrast</li>
+          </ul>
+
+          <h3 style="margin-top:1.5rem">What I Learned</h3>
+
+          <p>
+            This activity helped me explore how typography,
+            texture, and graphic elements can communicate
+            a visual concept and create a distinctive design.
+          </p>
+        </div>
+
+        <aside class="reveal">
+          <div class="card">
+            <h3>Project Facts</h3>
+
+            <dl style="margin:0;display:grid;gap:.75rem">
+              <div>
+                <dt class="muted">Project Type</dt>
+                <dd>Academic Graphic Design Activity</dd>
+              </div>
+              <div>
+                <dt class="muted">Subject</dt>
+                <dd>CEEL 301 – Graphics Design</dd>
+              </div>
+              <div>
+                <dt class="muted">Year</dt>
+                <dd>2026</dd>
+              </div>
+              <div>
+                <dt class="muted">Status</dt>
+                <dd>Completed Class Activity</dd>
+              </div>
+              <div>
+                <dt class="muted">Tools</dt>
+                <dd>Not specified</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <h2>Final Design</h2>
+        <p class="muted">
+          Original UNTHREAD typography and logo composition.
+        </p>
+
+        <img
+          class="detail-image"
+          src="../assets/images/ceel/unthread.png"
+          alt="UNTHREAD typography and logo design"
+        >
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container"
+        style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between">
+        <a class="btn btn-ghost" href="../projects.html">
+          ← Back to projects
+        </a>
+
+        <a class="btn btn-primary" href="ceel-1.html">
+          Back to Noir Coffee →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <noscript>© Jaber Saripada</noscript>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Noir Coffee | Projects | Jaber Saripada</title>
+  <meta name="description" content="Noir Coffee promotional poster design created for CEEL 301 Graphics Design.">
+
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) {
+        t = window.matchMedia &&
+          matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+
+  <style>
+    .detail-image {
+      display: block;
+      width: 100%;
+      max-height: 750px;
+      object-fit: contain;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="site-header">
+    <noscript>Enable JavaScript for site navigation.</noscript>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container">
+        <p style="margin-bottom:1rem">
+          <a href="../projects.html">← All projects</a>
+        </p>
+
+        <div class="card-meta">
+          <span class="badge">CEEL 301 Activity</span>
+          <span class="badge badge-outline">Graphic Design</span>
+        </div>
+
+        <h1>Noir Coffee</h1>
+
+        <p class="lead">
+          A promotional poster design for a coffee shop concept.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container grid grid-2" style="align-items:start">
+
+        <div class="reveal">
+          <h2>Project Overview</h2>
+
+          <p>
+            Noir Coffee is a promotional poster created as part
+            of the CEEL 301 Graphics Design activities. The design
+            focuses on presenting a coffee shop concept through
+            typography, layout, and visual presentation.
+          </p>
+
+          <h3 style="margin-top:1.5rem">Design Concept</h3>
+
+          <p>
+            The poster uses a warm brown and cream color palette
+            to establish a coffee-inspired visual identity.
+            Typography and organized content help present the
+            promotional information clearly.
+          </p>
+
+          <h3 style="margin-top:1.5rem">Design Elements</h3>
+
+          <ul>
+            <li>Promotional poster layout</li>
+            <li>Warm brown and cream color palette</li>
+            <li>Typography and visual hierarchy</li>
+            <li>Menu and price presentation</li>
+            <li>Organized visual composition</li>
+          </ul>
+
+          <h3 style="margin-top:1.5rem">What I Learned</h3>
+
+          <p>
+            This activity helped me understand how color,
+            typography, and layout work together to communicate
+            a promotional message. It also helped develop my
+            understanding of visual hierarchy in graphic design.
+          </p>
+        </div>
+
+        <aside class="reveal">
+          <div class="card">
+            <h3>Project Facts</h3>
+
+            <dl style="margin:0;display:grid;gap:.75rem">
+              <div>
+                <dt class="muted">Project Type</dt>
+                <dd>Academic Graphic Design Activity</dd>
+              </div>
+              <div>
+                <dt class="muted">Subject</dt>
+                <dd>CEEL 301 – Graphics Design</dd>
+              </div>
+              <div>
+                <dt class="muted">Year</dt>
+                <dd>2026</dd>
+              </div>
+              <div>
+                <dt class="muted">Status</dt>
+                <dd>Completed Class Activity</dd>
+              </div>
+              <div>
+                <dt class="muted">Tools</dt>
+                <dd>Not specified</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <h2>Final Design</h2>
+        <p class="muted">
+          Original Noir Coffee promotional poster.
+        </p>
+
+        <img
+          class="detail-image"
+          src="../assets/images/ceel/noir-coffee.png"
+          alt="Noir Coffee promotional poster"
+        >
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container"
+        style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between">
+        <a class="btn btn-ghost" href="../projects.html">
+          ← Back to projects
+        </a>
+
+        <a class="btn btn-primary" href="ceel-2.html">
+          Next: Starlight →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <noscript>© Jaber Saripada</noscript>
+  </footer>
+</body>
+</html>
