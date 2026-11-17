@@ -223,7 +223,7 @@
 
       images: [
         {
-          src: "assets/images/ceel/3d-banana.jpg",
+          src: "assets/images/ceel/banana-3D.jpg",
           alt: "Three-dimensional banana colored pencil drawing"
         }
       ],
